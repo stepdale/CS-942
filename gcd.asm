@@ -1,7 +1,7 @@
 include Irvine32.inc
 
 .data
-dividend WORD ?
+dividend WORD ? 
 divisor WORD ?
 gcdText BYTE "The gcd is: ", 0;
 dividendText BYTE "The dividend x is: ", 0
@@ -12,8 +12,8 @@ divisorText BYTE " ,The divisor y is: ", 0
 main PROC
 
 	; x = 1331, y = 1001
-	mov dividend, 1331d
-	mov divisor, 1001d
+	mov dividend, 1331d ;gather dividened
+	mov divisor, 1001d  ;gather divisor
 
 	;Print text
 	mov edx, OFFSET dividendText
@@ -62,3 +62,5 @@ GreatestCommonDivisor ENDP
 
 
 END main
+
+;are we going to show GCD: total?
