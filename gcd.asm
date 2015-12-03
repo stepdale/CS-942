@@ -1,7 +1,7 @@
 include Irvine32.inc
 
 .data
-dividend WORD ?
+dividend WORD ? 
 divisor WORD ?
 gcdText BYTE "The gcd is: ", 0;
 dividendText BYTE "The dividend x is: ", 0
@@ -18,7 +18,7 @@ main PROC
 	;Print text
 	mov edx, OFFSET dividendText
 	call WriteString
-	movsx eax, dividend
+	movsx eax, dividend ;only one result at a time right?
 	call WriteInt
 
 	mov edx, OFFSET divisorText
@@ -62,3 +62,4 @@ GreatestCommonDivisor ENDP
 
 
 END main
+;does it spit out a GCD: framework?
